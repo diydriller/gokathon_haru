@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+    <head>
+        <link rel='stylesheet' type='text/css' href='/main.css'>
+              
+    </head>
+
+    <body>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>_id</th>
+                    <th>fromId</th>
+                    <th>toId</th>
+                    <th>message</th>
+                    <th>createdAt</th>
+                </tr> 
+            </thead>
+            <tbody>
+                <% cheers.forEach(el=>{ %>
+                    <tr>
+                        <td> <%= el._id %> </td>
+                        <td> <%= el.fromId %> </td>
+                        <td> <%= el.toId %> </td>
+                        <td><%= el.message %></td>
+                        <td> <%= el.createdAt %> </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+
+    </body>
+    
+
+
+
+
+
+
+</html>

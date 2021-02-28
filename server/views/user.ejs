@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+    <head>
+        <link rel='stylesheet' type='text/css' href='/main.css'>
+              
+    </head>
+
+    <body>
+       
+       
+        <table id='users'>
+            <thead>
+                <tr>
+                    <th>_id</th>
+                    <th>email</th>
+                    <th>displayName</th>
+                    <th>profileImage</th>
+                    <th>followedPeople</th>
+                    <th>followingPeople</th>
+                    <th>latitude</th>
+                    <th>longtitude</th>
+                </tr> 
+            </thead>
+            <tbody>
+                <% users.forEach(el=>{ %>
+                    <tr>
+                        <td> <%= el._id %> </td>
+                        <td> <%= el.email %> </td>
+                        <td> <%= el.displayName %> </td>
+                        <td> <img src="<%= el.profileImage %>" width='50' height='50' onerror="this.style.display='none'" /> </td>
+                        <td> 
+                            <% el.followedPeople.forEach(ell=>{ %>
+                                <%= ell %>
+                            <% }) %>  
+                        </td>
+                        <td> 
+                            <% el.followingPeople.forEach(ell=>{ %>
+                                <%= ell %>
+                            <% }) %>  
+                        </td>
+                        <td><%= el.latitude %></td>
+                        <td><%= el.longtitude %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+
+    </body>
+     
+  
+
+
+
+
+
+
+
+</html>

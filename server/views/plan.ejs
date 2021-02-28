@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+    <head>
+        <link rel='stylesheet' type='text/css' href='/main.css'>
+        
+    </head>
+
+    <body>
+        
+        
+        <table id='users'>
+            <thead>
+                <tr>
+                    <th>_id</th>
+                    <th>userId</th>
+                    <th>title</th>
+                    <th>isLocked</th>
+                    <th>isFinished</th>
+                    <th>createdAt</th>
+                    <th>likePeople</th>
+                </tr> 
+            </thead>
+            <tbody>
+                <% plans.forEach(el=>{ %>
+                    <tr>
+                        <td> <%= el._id %> </td>
+                        <td> <%= el.userId %> </td>
+                        <td> <%= el.title %> </td>
+                        <td> <%= el.isLocked %> </td>
+                        <td> <%= el.isFinished %> </td>
+                        <td> <%= el.createdAt %> </td>
+                        <td>  
+                            <% el.likePeople.forEach(eel=>{ %>
+                                <%= eel %>
+                            <% }) %>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+
+    </body>
+
+
+
+
+
+
+
+
+
+</html>

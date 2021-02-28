@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+    <head>
+        <link rel='stylesheet' type='text/css' href='/main.css'>
+              
+    </head>
+
+    <body>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>_id</th>
+                    <th>displayName</th>
+                    <th>title</th>
+                    <th>commentImage</th>
+                    <th>comment</th>
+                </tr> 
+            </thead>
+            <tbody>
+                <% comments.forEach(el=>{ %>
+                    <tr>
+                        <td> <%= el._id %> </td>
+                        <td> <%= el.displayName %> </td>
+                        <td> <%= el.title %> </td>
+                        <td> <img src="<%= el.commentImage %>" width='50' height='50' onerror="this.style.display='none'" /> </td>
+                        <td><%= el.comment %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+
+    </body>
+    
+
+
+
+
+
+
+</html>
